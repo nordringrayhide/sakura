@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.email       = ["zb@ubit.com", "romanvbabenko@gmail.com"]
   s.homepage    = ""
   s.summary     = %q{Saikuro is a Ruby cyclomatic complexity analyzer}
-  s.description     = %q{When given Ruby source code Saikuro will generate a report listing the cyclomatic complexity of each method found.  In addition, Saikuro counts the number of lines per method and can generate a listing of the number of tokens on each line of code.}
+  s.description = %q{When given Ruby source code Saikuro will generate a report listing the cyclomatic complexity of each method found.  In addition, Saikuro counts the number of lines per method and can generate a listing of the number of tokens on each line of code.}
 
   s.rubyforge_project = "saikuro"
 
