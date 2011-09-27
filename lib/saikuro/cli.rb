@@ -9,7 +9,6 @@ module Saikuro
 
   include ResultIndexGenerator
 
-
   def run
 
   files = Array.new
@@ -86,10 +85,7 @@ module Saikuro
   state_formater = nil if !comp_state
   token_count_formater = nil if !comp_token
 
-  idx_states, idx_tokens = Saikuro.analyze(files,
-                                           state_formater,
-                                           token_count_formater,
-                                           output_dir)
+  idx_states, idx_tokens = Saikuro.analyze(files, state_formater, token_count_formater, output_dir)
 
   write_cyclo_index(idx_states, output_dir)
   write_token_index(idx_tokens, output_dir)
