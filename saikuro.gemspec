@@ -1,14 +1,15 @@
 # -*- coding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = "Saikuro"
-  s.version = "1.1.1"
-  s.author = "Zev Blut"
-  s.email = "zb@ubit.com"
-  s.homepage = "http://saikuro.rubyforge.org/"
-  s.rubyforge_project = 'saikuro'
+  s.name = "japgolly-Saikuro"
+  s.version = "1.1.1.0"
+  s.author = "David Barri"
+  s.email = "japgolly@gmail.com"
+  s.homepage = "https://github.com/japgolly/Saikuro"
+  s.rubyforge_project = 'japgolly-Saikuro'
   s.platform = Gem::Platform::RUBY
-  s.summary = "Saikuro is a Ruby cyclomatic complexity analyzer.  When given Ruby
+  s.summary = "Saikuro is a Ruby cyclomatic complexity analyzer."
+  s.description = "When given Ruby
   source code Saikuro will generate a report listing the cyclomatic
   complexity of each method found.  In addition, Saikuro counts the
   number of lines per method and can generate a listing of the number of
