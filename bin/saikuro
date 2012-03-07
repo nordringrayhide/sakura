@@ -88,6 +88,7 @@
 # == Author
 # Zev Blut (zb@ubit.com)
 
+$:.unshift File.expand_path('../../lib',__FILE__)
 require 'saikuro'
 
 SaikuroCMDLineRunner.new.run
