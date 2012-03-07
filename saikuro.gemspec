@@ -1,6 +1,6 @@
-require 'rubygems'
+# -*- coding: utf-8 -*-
 
-spec = Gem::Specification.new do |s|
+Gem::Specification.new do |s|
   s.name = "Saikuro"
   s.version = "1.1.1"
   s.author = "Zev Blut"
@@ -13,19 +13,11 @@ spec = Gem::Specification.new do |s|
   complexity of each method found.  In addition, Saikuro counts the
   number of lines per method and can generate a listing of the number of
   tokens on each line of code."
-  candidates = Dir.glob("{bin,lib,tests}/**/*")
-  s.files = candidates.delete_if do |item|
-    item.include?(".svn") || item.include?("rdoc")
-  end
+
+  s.files= Dir['{bin,lib}/**/*']
+  s.test_files= Dir['{test,spec,tests}/**/*']
+
   s.executables = ['saikuro']
   s.has_rdoc = true
   s.extra_rdoc_files = ["README"]
 end
-
-
-
-if __FILE__ == $0
-  Gem::manage_gems
-  Gem::Builder.new(spec).build
-end
-
