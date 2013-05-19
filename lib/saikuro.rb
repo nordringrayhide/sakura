@@ -70,7 +70,7 @@ class TokenCounter
     @files.each do |fname, tok_per_line|
       formater.start_file(fname)
       tok_per_line.sort.each do |line,num|
-  formater.line_token_count(line,num)
+	    formater.line_token_count(line,num)
       end
       formater.end_file
     end
@@ -477,9 +477,9 @@ class ParseDef < EndableParseState
     when TkSPACE
       # mark first space so we can stop at next space
       if @first_space
-  @first_space = false
+        @first_space = false
       else
-  @looking_for_name = false
+        @looking_for_name = false
       end
     when TkNL,TkLPAREN,TkfLPAREN,TkSEMICOLON
       # we can also stop at a new line or left parenthesis
@@ -496,14 +496,14 @@ class ParseDef < EndableParseState
       @name<< "]"
     else
       begin
-  @name<< token.name.to_s
-      rescue Exception => err
-  #what is this?
-  STDOUT.puts @@token_counter.current_file
-  STDOUT.puts @name
-  STDOUT.puts token.inspect
-  STDOUT.puts err.message
-  exit 1
+        @name<< token.name.to_s
+          rescue Exception => err
+        #what is this?
+        STDOUT.puts @@token_counter.current_file
+        STDOUT.puts @name
+        STDOUT.puts token.inspect
+        STDOUT.puts err.message
+        exit 1
       end
     end
   end

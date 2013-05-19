@@ -5,7 +5,6 @@ module Saikuro
   require 'getoptlong'
   require 'fileutils'
   require 'find'
-  require 'rdoc/usage'
 
   include ResultIndexGenerator
 
